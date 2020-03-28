@@ -11,11 +11,6 @@
   min-height: calc(100vh - 96px);
 }
 
-.LayoutHeader {
-  height: 64px;
-  background-color: #999;
-}
-
 .LayoutFooter {
   height: 32px;
   background-color: #999;

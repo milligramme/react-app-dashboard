@@ -2,13 +2,12 @@ import React from "react";
 
 import { Container } from "@material-ui/core";
 
+import Header from "../../organisms/Header";
 import classes from "./classes.module.css";
 
 const MainTemplate: React.FunctionComponent = ({ children }) => (
   <div className={classes.LayoutPage}>
-    <header className={classes.LayoutHeader}>
-      header
-    </header>
+    <Header />
     <Container fixed={true} maxWidth="lg" className={classes.LayoutContainer}>
       {children}
     </Container>
