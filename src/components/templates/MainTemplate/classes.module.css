@@ -1,0 +1,19 @@
+.LayoutPage {
+  height: 100%;
+  width: 100%;
+  min-width: fit-content;
+}
+
+.LayoutContainer {
+  background-color: #333;
+  color: #fff;
+  min-height: calc(100vh - 96px);
+}
+
+.LayoutHeader {
+  height: 64px;
+}
+
+.LayoutFooter {
+  height: 32px;
+}

@@ -1,9 +1,11 @@
 import React from "react";
 
+import MainTemplate from "../../templates/MainTemplate";
+
 const Home: React.FunctionComponent = () => (
-  <div>
+  <MainTemplate>
     hello
-  </div>
+  </MainTemplate>
 );
 
 export default Home;
