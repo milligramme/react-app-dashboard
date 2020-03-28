@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import {
   AppBar,
@@ -11,7 +12,9 @@ import classes from "./classes.module.css";
 const Header: React.FunctionComponent = () => (
   <AppBar className={classes.LayoutHeader}>
     <Toolbar>
-      <Typography>Header</Typography>
+      <Link to="/" className={classes.Link}>
+        <Typography>Header</Typography>
+      </Link>
     </Toolbar>
   </AppBar>
 );
