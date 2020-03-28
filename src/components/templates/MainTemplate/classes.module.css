@@ -6,6 +6,7 @@
 }
 
 .LayoutContainer {
+  margin-top: 64px;
   background-color: #333;
   color: #fff;
   min-height: calc(100vh - 96px);
