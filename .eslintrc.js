@@ -14,4 +14,10 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:react-hooks/recommended'
   ],
+  rules: {
+    "quotes": ["error", "double"],
+    "import/no-unresolved": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/semi": ["error", "always", { "omitLastInOneLineBlock": true }],
+  }
 };
