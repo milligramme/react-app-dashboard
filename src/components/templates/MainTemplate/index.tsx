@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Container } from "@material-ui/core";
+
 import classes from "./classes.module.css";
 
 const MainTemplate: React.FunctionComponent = ({ children }) => (
@@ -7,9 +9,9 @@ const MainTemplate: React.FunctionComponent = ({ children }) => (
     <header className={classes.LayoutHeader}>
       header
     </header>
-    <div className={classes.LayoutContainer}>
+    <Container fixed={true} maxWidth="lg" className={classes.LayoutContainer}>
       {children}
-    </div>
+    </Container>
     <footer className={classes.LayoutFooter}>
       footer
     </footer>

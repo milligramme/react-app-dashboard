@@ -2,6 +2,7 @@
   height: 100%;
   width: 100%;
   min-width: fit-content;
+  background-color: #666;
 }
 
 .LayoutContainer {
@@ -12,8 +13,10 @@
 
 .LayoutHeader {
   height: 64px;
+  background-color: #999;
 }
 
 .LayoutFooter {
   height: 32px;
+  background-color: #999;
 }
