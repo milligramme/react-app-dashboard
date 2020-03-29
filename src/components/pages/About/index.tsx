@@ -19,8 +19,8 @@ const About: React.FunctionComponent = () => {
       name: Yup.string()
         .required("required !!!"),
       age: Yup.number()
-        .min(1, "custom mess ${min}")
-        .max(10, "custom mess ${max}"),
+        .min(1, "custom mess ${min}") // eslint-disable-line no-template-curly-in-string
+        .max(10, "custom mess ${max}"), // eslint-disable-line no-template-curly-in-string
   }), []);
 
   return (

@@ -20,7 +20,7 @@ const CustomizedTextField: React.FunctionComponent<Props> = ({
   onBlur = () => { },
  ...restProps
  }) => {
-  const context = useFormikContext<any>();
+  const context = useFormikContext<any>(); // eslint-disable-line @typescript-eslint/no-explicit-any
 
   // fallback
   /* eslint-disable react-hooks/rules-of-hooks */
