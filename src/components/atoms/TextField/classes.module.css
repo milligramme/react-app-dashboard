@@ -1,0 +1,18 @@
+.Input.Input {
+  background-color: #ccc;
+  margin: 16px 16px 0 0;
+  font-size: 16px;
+}
+
+.InputInput.InputInput {
+  padding: 8px 16px;
+}
+
+.InputLabel.InputLabel {
+  font-size: 12px;
+}
+
+.InputLabelOutlined.InputLabelOutlined.InputLabelOutlined {
+  transform: none;
+  margin-left: 8px;
+}
