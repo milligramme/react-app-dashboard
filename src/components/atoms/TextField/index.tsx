@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { useField, useFormikContext } from "formik";
+import { useField, useFormikContext, ErrorMessage } from "formik";
 
 import {
   TextField,
@@ -20,10 +20,11 @@ const CustomizedTextField: React.FunctionComponent<Props> = ({
   onBlur = () => { },
  ...restProps
  }) => {
+  const context = useFormikContext<any>();
 
   // fallback
   /* eslint-disable react-hooks/rules-of-hooks */
-  if (useFormikContext() === undefined) {
+  if (context === undefined) {
     return (
       <TextField
         name={name}
@@ -34,28 +35,32 @@ const CustomizedTextField: React.FunctionComponent<Props> = ({
     );
   }
 
-   const [field] = useField({ name });
-   const {
-     onChange: onFieldChange,
-     onBlur: onFieldBlur,
-     ...restFieldProps
- } = field;
+  const hasError = useMemo(() => context !== undefined && context.errors[name] !== undefined, [context, name]);
 
-   const handleChange: React.ChangeEventHandler<HTMLInputElement> = useMemo(() => e => {
-     onFieldChange(e);
-     onChange(e);
-   }, [onChange, onFieldChange]);
+  const [field] = useField({ name });
+  const {
+    onChange: onFieldChange,
+    onBlur: onFieldBlur,
+    ...restFieldProps
+  } = field;
 
-   const handleBlur: React.FocusEventHandler<HTMLInputElement> = useMemo(() => e => {
-     onFieldBlur(e);
-     onBlur(e);
-   }, [onBlur, onFieldBlur]);
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = useMemo(() => e => {
+    onFieldChange(e);
+    onChange(e);
+  }, [onChange, onFieldChange]);
 
+  const handleBlur: React.FocusEventHandler<HTMLInputElement> = useMemo(() => e => {
+    onFieldBlur(e);
+    onBlur(e);
+  }, [onBlur, onFieldBlur]);
   /* eslint-enable react-hooks/rules-of-hooks */
 
   return (
     <TextField
       variant="outlined"
+      classes={{
+        root: classes.TextField,
+      }}
       InputProps={{
         notched: false,
         labelWidth: 0,
@@ -75,6 +80,12 @@ const CustomizedTextField: React.FunctionComponent<Props> = ({
       onChange={handleChange}
       {...restProps}
       {...restFieldProps}
+      helperText={hasError ? <ErrorMessage name={name} /> : null}
+      FormHelperTextProps={{
+        classes: {
+          root: classes.FormHelperText,
+        }
+      }}
     />
   );
 };
