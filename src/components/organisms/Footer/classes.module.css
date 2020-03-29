@@ -1,0 +1,16 @@
+.LayoutFooter {
+  height: 32px;
+  background-color: #999;
+  padding: 8px 12px;
+  display: flex;
+}
+
+.Link {
+  text-decoration: unset;
+}
+
+.TypographyFooter.TypographyFooter {
+  font-size: 12px;
+  color: #666;
+  margin-right: 16px;
+}

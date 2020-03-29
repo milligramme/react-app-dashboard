@@ -1,8 +1,14 @@
 .LayoutHeader.LayoutHeader {
   height: 64px;
   background-color: #999;
+  color: #ccc;
+}
+
+.TypographyHeader.TypographyHeader {
+  color: #333;
+  font-weight: bold;
 }
 
 .Link {
-  all: unset;
+  text-decoration: unset;
 }

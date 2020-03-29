@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import {
   AppBar,
@@ -12,9 +12,9 @@ import classes from "./classes.module.css";
 const Header: React.FunctionComponent = () => (
   <AppBar className={classes.LayoutHeader}>
     <Toolbar>
-      <Link to="/" className={classes.Link}>
-        <Typography>Header</Typography>
-      </Link>
+      <NavLink to="/" className={classes.Link}>
+        <Typography classes={{ root: classes.TypographyHeader }}>Header</Typography>
+      </NavLink>
     </Toolbar>
   </AppBar>
 );

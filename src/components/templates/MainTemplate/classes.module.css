@@ -8,11 +8,6 @@
 .LayoutContainer {
   margin-top: 64px;
   background-color: #fefefe;
-  color: #fff;
+  color: #666;
   min-height: calc(100vh - 96px);
-}
-
-.LayoutFooter {
-  height: 32px;
-  background-color: #999;
 }

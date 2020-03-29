@@ -3,6 +3,7 @@ import React from "react";
 import { Container } from "@material-ui/core";
 
 import Header from "../../organisms/Header";
+import Footer from "../../organisms/Footer";
 import classes from "./classes.module.css";
 
 const MainTemplate: React.FunctionComponent = ({ children }) => (
@@ -11,9 +12,7 @@ const MainTemplate: React.FunctionComponent = ({ children }) => (
     <Container fixed={true} maxWidth="lg" className={classes.LayoutContainer}>
       {children}
     </Container>
-    <footer className={classes.LayoutFooter}>
-      footer
-    </footer>
+    <Footer />
   </div>
 );
 
