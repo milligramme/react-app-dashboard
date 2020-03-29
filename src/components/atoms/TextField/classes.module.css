@@ -1,6 +1,10 @@
+.TextField.TextField {
+  margin-bottom: 16px;
+}
+
 .Input.Input {
   background-color: #ccc;
-  margin: 16px 16px 16px 0;
+  margin: 16px 16px 0 0;
   font-size: 16px;
 }
 
@@ -15,4 +19,8 @@
 .InputLabelOutlined.InputLabelOutlined.InputLabelOutlined {
   transform: none;
   margin-left: 8px;
+}
+
+.FormHelperText.FormHelperText {
+  color: #932;
 }
