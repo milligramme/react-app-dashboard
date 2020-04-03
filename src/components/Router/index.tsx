@@ -9,7 +9,7 @@ import About from "../pages/About";
 const Router: React.FunctionComponent = () => (
   <>
     <CssBaseline />
-    <BrowserRouter>
+    <BrowserRouter basename="/react-app-dashboard">
       <Switch>
         <Route exact={true} path="/"><Home /></Route>
         <Route exact={true} path="/about"><About /></Route>
