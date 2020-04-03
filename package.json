@@ -28,8 +28,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext=ts,tsx",
-    "lint:fix": "eslint src --ext=ts,tsx --fix"
+    "lint:fix": "eslint src --ext=ts,tsx --fix",
+    "predeploy": "react-scripts build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://milligramme.github.io/react-app-dashboard/",
   "eslintConfig": {
     "extends": "react-app"
   },
