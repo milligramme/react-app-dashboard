@@ -1,0 +1,9 @@
+.AddForm {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.ButtonSubmit.ButtonSubmit {
+  margin-top: 16px;
+}
