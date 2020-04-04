@@ -10,6 +10,9 @@ const Footer: React.FunctionComponent = () => (
     <NavLink to="/about" className={classes.Link}>
       <Typography classes={{ root: classes.TypographyFooter }}>about</Typography>
     </NavLink>
+    <NavLink to="/todo" className={classes.Link}>
+      <Typography classes={{ root: classes.TypographyFooter }}>todo</Typography>
+    </NavLink>
     <Typography classes={{ root: classes.TypographyFooter }}>something</Typography>
     <Typography classes={{ root: classes.TypographyFooter }}>copyrights</Typography>
   </div>
