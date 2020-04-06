@@ -5,6 +5,7 @@ import { CssBaseline } from "@material-ui/core";
 
 import Home from "../pages/Home";
 import About from "../pages/About";
+import TodoList from "../pages/TodoList";
 
 const Router: React.FunctionComponent = () => (
   <>
@@ -13,6 +14,7 @@ const Router: React.FunctionComponent = () => (
       <Switch>
         <Route exact={true} path="/"><Home /></Route>
         <Route exact={true} path="/about"><About /></Route>
+        <Route exact={true} path="/todo"><TodoList /></Route>
       </Switch>
     </BrowserRouter>
   </>
