@@ -8,6 +8,7 @@ import { AddCircle } from "@material-ui/icons";
 
 import MainTemplate from "../../templates/MainTemplate";
 import TextField from "../../atoms/TextField";
+import Checkbox from "../../atoms/Checkbox";
 import classes from "./classes.module.css";
 
 interface Task {
@@ -61,12 +62,15 @@ const TodoList: React.FunctionComponent = () => {
                 <AddCircle />
               </IconButton>
             </div>
+
+            {tasks.filter(({ done } ) => !done).map(task =>
+              <div key={task.id}>
+                {task.id} {task.title}
+                <Checkbox name="done" />
+              </div>)}
           </form>
         )}
       </Formik>
-
-      {tasks.map(task =>
-        <div key={task.id}>{task.id} {task.title}</div>)}
     </MainTemplate>
   )
 }
