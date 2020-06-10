@@ -31,7 +31,9 @@
     "lint": "eslint src --ext=ts,tsx",
     "lint:fix": "eslint src --ext=ts,tsx --fix",
     "predeploy": "react-scripts build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "homepage": "https://milligramme.github.io/react-app-dashboard/",
   "eslintConfig": {
@@ -50,6 +52,11 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/preset-create-react-app": "^3.0.0",
+    "@storybook/react": "^5.3.19",
     "@types/react-router-dom": "^5.1.3",
     "@types/uuid": "^7.0.2",
     "@types/yup": "^0.26.33",
